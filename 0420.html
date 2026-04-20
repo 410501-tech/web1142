@@ -1,0 +1,58 @@
+<html>
+<head>
+      <title>0420-javascript輸出與輸入</title>
+      <!--HTML註解-->
+    <style>
+        /*CSS註解*/
+    </style>
+    <Script>
+        //JS單行註解
+        /*多行註解*/
+        /* window 函式:
+        alert("訊息");
+        答案=prompt("問答");
+             答案為string或null
+        是否=confirm("確認")
+             是否 ture/false
+
+
+    consle.log("開發人員訊息");
+    document.getElementById("元素1d")透過1d取得網頁元素
+        元素.innerHTML 元素內的網頁內容*/
+
+        function sayhello(){
+            name=prompt("你叫什麼名字?")
+            console.log(name);
+            document.getElementById("msg").innerHTML="Hello"+name;
+            
+            
+        }
+        function calc(){
+             userAns=parseInt(prompt("你認為答案是多少?"));
+
+        }
+
+    </Script>
+</head>
+<body>
+    <button onclick="sayhello();">打招呼</button>
+
+     <div id="mag"></div>
+     <hr>
+     <input type="text" id="in1"><br>
+     <input type="password"><br>
+     <input type="number"><br>
+     <input type="date"><br>
+     <input type="datetime-local"><br>
+     <input type="color"><br>
+    <hr>
+    <input type="number" id="n1">+<input type="number" id="n2">=<button type= < button onclick="calc();">?</button><br>
+    <input type="text" id="ans" disabled>
+
+</body>
+
+
+
+
+
+</html>
