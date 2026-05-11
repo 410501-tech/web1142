@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>0511-元素的產生與消失</title>
+    <style>
+         #board{
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+         }
+         #target{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+    <script>
+        var game_second=false;
+        var game_second=30;
+        
+
+        function gamestart(){
+           if(game_started) return;
+           game_started=true
+            setTimeout()clearInterval,game_second*1000,setInterval(() => {
+            game_second-=0.01;
+            document.getElementById("timebar").style.width=(game_second*20)+"px";
+            if (game_second<10) {
+                document.getElementById("timebar").style.backgroundColor="red";
+            }
+           },10);      
+            setInterval(createtarget,1000);
+                
+        }
+        function gamestop(){
+            game_start=false;
+            game_timer.foreach()
+        }
+
+    </script>
+</head>
+<body>
+    <div id="status">得分：<span id="score">0</span>分<div>
+    <div id="timebar"></div>
+    <div id="board" onclick="clickBoard()">
+
+    </div>
+
+
+    
+</body>
+
+
+
+
+</html>
