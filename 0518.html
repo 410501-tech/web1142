@@ -1,0 +1,50 @@
+<html>
+<head>
+     <title>0518-鍵盤控制人物移動</title>
+<style>
+     body{
+        background: url("pic/sprite.png");
+        background-size: 300px 210px;
+     }
+    @keyframes walking{
+        0%{background-position-x:0px}
+        100%{background-position-x:-144px}
+    }
+
+    #role{
+         width: 576px;
+         height: 72px; ;
+         background: url("pic/sprite.png");
+         animation: walking 600ms steps(3) infinite;
+         position: absolute;
+     }
+</style>
+<script>
+     function mykeydown(){
+        event.preventDefault();
+        var role=document.getElementById("role");
+        if(event.key=="Arrowdown"){
+            role.style.backgroundPositionY="0px";
+        }else if(event.key=="Arrowleft"){
+            role.style.backgroundPositionY="-72px";
+            if(role.pos.x>0) role.pos.x--;
+        }else if(event.key=="Arrowright"){
+            role.style.backgroundPositionY="-144px";
+            role.pos.x++;
+        }else if(event.key=="Arrowup"){
+            role.style.backgroundPositionY="-216px";
+            if(role.pos.y>0)role.pos.y--;
+        }
+
+
+     }
+
+</script>
+</head>
+<body onkeydown="kd();">
+    <div id="role"></div>
+
+
+
+</body>
+</html>
