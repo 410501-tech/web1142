@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>0525-宇宙射擊遊戲</title>
+<style>
+    @keyframes bg_move{
+          0%{background-position-y: 0px;}
+          10%{background-position-y: 216px;}
+}
+    #universe{
+         width: 600px;
+         height: 600px;
+         background: url("pic/bg_stars.jpg");
+         animation: bg_move 2s linear infinite;
+         position: relative;
+    }
+    #ship{
+        width: 40px;
+        height: 60px;
+        position: absolute;
+        top: 540px;
+        left: 280px;
+    }
+    .ufo{
+        width: 60px;
+        height: 40px;
+        position: absolute;
+
+    }
+    .bullet{
+       width: 4px;
+       height: 6px;
+       background: red;
+       border-radius: 100% 100% 0 0;
+       position: absolute;
+    }
+</style>
+<script>
+function ship_move(){
+    if(ship.way["ArrowUp"]&& ship.pos.y>0)ship.pos.y--;
+    else if(ship.way["Arrowdown"]&& ship.pos.y<540)ship.pos.y++
+    else if(ship.way["Arrowdown"]&& ship.pos.x>0)ship.pos.x--
+    else if(ship.way["Arrowdown"]&& ship.pos.x<560)ship.pos.x++
+    showpos(ship);
+}
+function bullet_move(b){
+      if(b.pos.y<0){
+         clearInterval(b.move);
+         b.remove();
+      } else {
+           b.pos.y--;
+           ShowPos(b);
+
+
+      }
+
+
+
+
+}
+function shoot(){
+     if(!gameing) return;
+     var b=document.createElement("div")
+
+
+
+
+
+}
+function ufocreate(){
+      var b=document.createElement("div");
+      b.className="ufo";
+      u.pos={x:0};
+
+}
+function game_start(){
+    gameing=true
+}
+function game_stop(){
+    gameing=false
+}
+
+
+
+</script>
+</head>
+<body onload="game_">
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
