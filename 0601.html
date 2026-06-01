@@ -1,0 +1,151 @@
+<html>
+<head>
+   <title>記憶翻牌遊戲</title>
+   <style>
+      body{text-align: center;font-family:sans-serif; background:#e0f2fe ;}
+
+      #board{display: grid; gap: 5px; width: 320px; margin: 20px auto;}
+
+
+      .card{
+            background: #3b82f6;
+            aspect-ratio:1 ;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+            cursor: pointer;
+            font-size: 1.5px;
+      }
+
+
+      .card.flipped{background: white; pointer-events: none;}
+
+      .card.matched{background: #10b981;color: white; pointer-events: none;}
+</style>
+</head>
+<body>
+    <h1>🧠翻牌記憶</h1>
+
+    <botton onclick="init(4)">簡單(4×4)</botton>
+    <botton onclick="init(6)">簡單(6×6)</botton>
+    <botton onclick="init(8)">簡單(8×8)</botton>
+
+    <p>步數:<span id="mText">0</span>| 時間:<span id="tText">0</span>秒</p>
+
+    <div id="board"></div>
+
+    <script>
+      const icons=['🍎','🍌','🍇','🍉','🍓','🍒','🍍','🥑','🥝','🥭','🍊','🍐','🍏','🫐','🥥','🍈','🥦','🥕','🌽','🌶️','🍄‍🟫','🥔','🧅','🫛','🫚','🫑','🌰','🍆','🧄','🥒','🥬','🫘']
+      
+
+      let opened=[];
+      let matched=0;
+      let move=0;
+      let secends=0;
+      let lock=false;
+      let timer=null;
+      let size=4;
+
+
+      function init(grid){
+          clearInterval(timer);
+          timer=null;
+          opened=[];
+          matched=0;
+          move=0;
+          secends=0;
+          lock=false;
+          size=grid;
+
+          document.getElementById('mText').textcontent=0;
+          document.getElementById('tText').textcontent=0;
+
+
+
+
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
